@@ -100,7 +100,7 @@ app.post("/register", async (req, res) => {
 
       res.status(201).json({ message: "User registered successfully" });
     } else {
-      res.status(201).json({ message: "User Already Exist" });
+      res.status(202).json({ message: "User Already Exist" });
     }
 
     // Hash the password
