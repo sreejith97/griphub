@@ -221,7 +221,7 @@ app.post("/register-complaint", verifyToken, async (req, res) => {
         productName: productName,
         topic: topic,
         user: { connect: { id: registeredUser.id } },
-        registerdBy: user ? user.name : "Unknown User",
+        registerdBy: user && user.name ? user.name : "Unknown User",
         tag: tags[0] || noTag,
         statusChangeMessages: {
           create: {
